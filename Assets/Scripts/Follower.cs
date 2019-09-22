@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using PathCreation;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Follower : MonoBehaviour
 {
     public PathCreator pathCreator;
     public float speed = 5;
