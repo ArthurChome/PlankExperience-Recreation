@@ -10,8 +10,12 @@ using UnityEngine;
 
 public class Follower : MonoBehaviour
 {
+    /* Public fields that can be adapted with the Inspector panel */
     public PathCreator pathCreator;
+    // Default speed for the car. 
     public float speed = 5;
+    // Start position of the car on the path.
+    public float position = 0;
     float distanceTravelled; 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,7 @@ public class Follower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceTravelled += speed + Time.deltaTime;
+        distanceTravelled += speed + Time.deltaTime + position;
         transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
     }
 }
